@@ -11,9 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:ProtectionLevel="0"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{F339FD80-F830-4D37-8C34-95D1AA0F0AFC}">
+  DTS:VersionBuild="56"
+  DTS:VersionGUID="{64FF54C3-01A5-4D86-B3D6-824E8853889E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +28,8 @@
           DTS:ConnectionString="Data Source=SQL-SERVER-01;User ID=yan.sabarense;Initial Catalog=BI_TREINO_YAN;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{6FFD7F47-C11F-41C8-9B2D-F3DED9579C0C}10.0.1.66.BI_TREINO_YAN.yan.sabarense;">
           <DTS:Password
             DTS:Name="Password"
-            Sensitive="1"></DTS:Password>
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxHBayZfX20+EBjfERhyeuQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAcgrbiy1Y/Pa85350A2I8UAAAAAASAAACgAAAAEAAAAEAi66KnhQxiYcxa5a6lAdcYAAAADtvblJLDN7PHEIJqMKj0HH4/fa+FIsdDFAAAAOUJYNraJBsUwqf4Yb/DGf+4SX58</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -500,6 +500,363 @@
               version="1">
               <components>
                 <component
+                  refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Conversão de Dados;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;0"
+                  description="Conversão de Dados"
+                  name="Conversão de Dados"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados]"
+                      name="Entrada de Conversão de Dados">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados].Columns[id]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="id"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[id]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados].Columns[created_at]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="created_at"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[created_at]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados].Columns[first_name]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="first_name"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[first_name]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados].Columns[last_name]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="last_name"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[last_name]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados].Columns[email]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="email"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[email]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados].Columns[cell_phone]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="cell_phone"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cell_phone]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados].Columns[country]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="country"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[country]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados].Columns[state]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="state"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[state]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados].Columns[street]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="street"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[street]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados].Columns[number]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="number"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[number]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados].Columns[additionals]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="additionals"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[additionals]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados]"
+                      exclusionGroup="1"
+                      name="Saída de Conversão de Dados"
+                      synchronousInputId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of id]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of id]"
+                          name="Copy of id"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                              name="SourceInputColumnLineageID">#{Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[id]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of created_at]"
+                          dataType="date"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of created_at]"
+                          name="Copy of created_at"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                              name="SourceInputColumnLineageID">#{Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[created_at]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of first_name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of first_name]"
+                          name="Copy of first_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                              name="SourceInputColumnLineageID">#{Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[first_name]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of last_name]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of last_name]"
+                          name="Copy of last_name"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                              name="SourceInputColumnLineageID">#{Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[last_name]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of email]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of email]"
+                          name="Copy of email"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                              name="SourceInputColumnLineageID">#{Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[email]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of cell_phone]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of cell_phone]"
+                          name="Copy of cell_phone"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                              name="SourceInputColumnLineageID">#{Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cell_phone]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of country]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of country]"
+                          name="Copy of country"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                              name="SourceInputColumnLineageID">#{Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[country]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of state]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of state]"
+                          name="Copy of state"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                              name="SourceInputColumnLineageID">#{Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[state]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of street]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          length="255"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of street]"
+                          name="Copy of street"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                              name="SourceInputColumnLineageID">#{Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[street]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of number]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of number]"
+                          name="Copy of number"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                              name="SourceInputColumnLineageID">#{Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[number]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of additionals]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversão"
+                          errorRowDisposition="FailComponent"
+                          length="50"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of additionals]"
+                          name="Copy of additionals"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Especifica a coluna de entrada usada como a origem dois dados para a conversão."
+                              name="SourceInputColumnLineageID">#{Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[additionals]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Erro de Conversão de Dados]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Saída de Erro de Conversão de Dados"
+                      synchronousInputId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Erro de Conversão de Dados].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Erro de Conversão de Dados].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Erro de Conversão de Dados].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Erro de Conversão de Dados].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
                   refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="Destino OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;4"
@@ -572,93 +929,81 @@
                       name="Entrada de Destino OLE DB">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[id]"
-                          cachedCodepage="65001"
-                          cachedDataType="str"
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Copy of id]"
+                          cachedDataType="wstr"
                           cachedLength="50"
-                          cachedName="id"
+                          cachedName="Copy of id"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[id]"
-                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[id]" />
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of id]" />
                         <inputColumn
-                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[created_at]"
-                          cachedCodepage="65001"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="created_at"
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Copy of created_at]"
+                          cachedDataType="date"
+                          cachedName="Copy of created_at"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[created_at]"
-                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[created_at]" />
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of created_at]" />
                         <inputColumn
-                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[first_name]"
-                          cachedCodepage="65001"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="first_name"
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Copy of first_name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of first_name"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[first_name]"
-                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[first_name]" />
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of first_name]" />
                         <inputColumn
-                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[last_name]"
-                          cachedCodepage="65001"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="last_name"
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Copy of last_name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of last_name"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[last_name]"
-                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[last_name]" />
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of last_name]" />
                         <inputColumn
-                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[email]"
-                          cachedCodepage="65001"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="email"
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Copy of email]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of email"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[email]"
-                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[email]" />
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of email]" />
                         <inputColumn
-                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[cell_phone]"
-                          cachedCodepage="65001"
-                          cachedDataType="str"
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Copy of cell_phone]"
+                          cachedDataType="wstr"
                           cachedLength="50"
-                          cachedName="cell_phone"
+                          cachedName="Copy of cell_phone"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[cell_phone]"
-                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[cell_phone]" />
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of cell_phone]" />
                         <inputColumn
-                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[country]"
-                          cachedCodepage="65001"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="country"
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Copy of country]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of country"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[country]"
-                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[country]" />
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of country]" />
                         <inputColumn
-                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[state]"
-                          cachedCodepage="65001"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="state"
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Copy of state]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of state"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[state]"
-                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[state]" />
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of state]" />
                         <inputColumn
-                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[street]"
-                          cachedCodepage="65001"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="street"
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Copy of street]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Copy of street"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[street]"
-                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[street]" />
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of street]" />
                         <inputColumn
-                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[number]"
-                          cachedCodepage="65001"
-                          cachedDataType="str"
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Copy of number]"
+                          cachedDataType="wstr"
                           cachedLength="50"
-                          cachedName="number"
+                          cachedName="Copy of number"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[number]"
-                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[number]" />
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of number]" />
                         <inputColumn
-                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[additionals]"
-                          cachedCodepage="65001"
-                          cachedDataType="str"
+                          refId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Copy of additionals]"
+                          cachedDataType="wstr"
                           cachedLength="50"
-                          cachedName="additionals"
+                          cachedName="Copy of additionals"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[additionals]"
-                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[additionals]" />
+                          lineageId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados].Columns[Copy of additionals]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -1120,8 +1465,13 @@
               </components>
               <paths>
                 <path
-                  refId="Package\Contêiner da Sequência\Carga Clientes.Paths[Saída de Origem de Arquivo Simples]"
+                  refId="Package\Contêiner da Sequência\Carga Clientes.Paths[Saída de Conversão de Dados]"
                   endId="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB.Inputs[Entrada de Destino OLE DB]"
+                  name="Saída de Conversão de Dados"
+                  startId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Outputs[Saída de Conversão de Dados]" />
+                <path
+                  refId="Package\Contêiner da Sequência\Carga Clientes.Paths[Saída de Origem de Arquivo Simples]"
+                  endId="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados.Inputs[Entrada de Conversão de Dados]"
                   name="Saída de Origem de Arquivo Simples"
                   startId="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]" />
               </paths>
@@ -2376,29 +2726,55 @@
     design-time-name="Package\Contêiner da Sequência\Carga Clientes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB"
+          TopLeft="214.92307072534,221.538458296886" />
+        <NodeLayout
+          Size="200,47"
+          Id="Package\Contêiner da Sequência\Carga Clientes\Conversão de Dados"
+          TopLeft="217,142" />
         <NodeLayout
           Size="205,42"
           Id="Package\Contêiner da Sequência\Carga Clientes\Origem de Arquivo Simples"
-          TopLeft="216.999993860722,60.9999986886978" />
-        <NodeLayout
-          Size="200,42"
-          Id="Package\Contêiner da Sequência\Carga Clientes\Destino OLE DB"
-          TopLeft="220.92307072534,190.538458296886" />
+          TopLeft="215.999993860722,60.9999986886978" />
         <EdgeLayout
           Id="Package\Contêiner da Sequência\Carga Clientes.Paths[Saída de Origem de Arquivo Simples]"
-          TopLeft="320.161532293031,102.599998688698">
+          TopLeft="317.749996930361,102.999998688698">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,87.9384596081881"
+              EndConnector="0,39.0000013113022"
               Start="0,0"
-              End="0,80.4384596081881">
+              End="0,31.5000013113022">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,80.4384596081881" />
+                    End="0,31.5000013113022" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Contêiner da Sequência\Carga Clientes.Paths[Saída de Conversão de Dados]"
+          TopLeft="317.21153536267,189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.538458296886"
+              Start="0,0"
+              End="0,25.038458296886">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.038458296886" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
