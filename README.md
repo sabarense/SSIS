@@ -1,4 +1,4 @@
-"# E-commerce Data Warehouse
+# E-commerce Data Warehouse
 
 Um projeto completo de Data Warehouse para análise de dados de E-commerce, implementado com SQL Server Database Project e SSIS (SQL Server Integration Services).
 
