@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="56"
-  DTS:VersionGUID="{64FF54C3-01A5-4D86-B3D6-824E8853889E}">
+  DTS:VersionBuild="59"
+  DTS:VersionGUID="{6C03366B-B8AD-4CF2-8BCF-18D5C416DB51}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxHBayZfX20+EBjfERhyeuQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAcgrbiy1Y/Pa85350A2I8UAAAAAASAAACgAAAAEAAAAEAi66KnhQxiYcxa5a6lAdcYAAAADtvblJLDN7PHEIJqMKj0HH4/fa+FIsdDFAAAAOUJYNraJBsUwqf4Yb/DGf+4SX58</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxHBayZfX20+EBjfERhyeuQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADNXIjAj7Ih2XhAgn/7tPkdAAAAAASAAACgAAAAEAAAAG1LM982TPb28D1BZKIti1oYAAAALIYUO+YTI6hOxHrS//N2oYjcMTb4QDmcFAAAAJUpdPv0F55EXy+ftP1sxfY1HHdw</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -218,7 +218,6 @@
           DTS:refId="Package\Contêiner da Sequência\Carga Categoria"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Tarefa Fluxo de Dados"
-          DTS:Disabled="True"
           DTS:DTSID="{89151929-c099-4d32-a7ae-9bd3477b0b03}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -1482,7 +1481,6 @@
           DTS:refId="Package\Contêiner da Sequência\Carga Itens"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Tarefa Fluxo de Dados"
-          DTS:Disabled="True"
           DTS:DTSID="{092B5EEA-4589-429C-923F-564935087E12}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -1834,7 +1832,6 @@
           DTS:refId="Package\Contêiner da Sequência\Carga Ordens"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Tarefa Fluxo de Dados"
-          DTS:Disabled="True"
           DTS:DTSID="{CE20A4C9-B71A-443C-A2EA-20659CED5BEA}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -2162,7 +2159,6 @@
           DTS:refId="Package\Contêiner da Sequência\Carga Produto"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Tarefa Fluxo de Dados"
-          DTS:Disabled="True"
           DTS:DTSID="{74505EF9-D7CB-400D-9036-A3A17FB7783D}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -2535,21 +2531,21 @@
         <NodeLayout
           Size="146,42"
           Id="Package\Contêiner da Sequência\Carga Produto"
-          TopLeft="22.266652643019,33.0666660639976" />
+          TopLeft="13.516652643019,33.0666660639976" />
         <EdgeLayout
           Id="Package\Contêiner da Sequência.PrecedenceConstraints[Restrição]"
-          TopLeft="167.866652643019,53.4333327336775">
+          TopLeft="159.516652643019,53.6333327336775">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="44.3999896188583,0"
+              EndConnector="52.749989618858,0"
               Start="0,0"
-              End="36.8999896188583,0">
+              End="45.249989618858,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="36.8999896188583,0" />
+                    End="45.249989618858,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2803,15 +2799,15 @@
     design-time-name="Package\Contêiner da Sequência\Carga Itens">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\Contêiner da Sequência\Carga Itens\Origem do Excel - Itens"
-          TopLeft="345.846148692644,151.076920825702" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="178.4,48.8"
           Id="Package\Contêiner da Sequência\Carga Itens\Destino OLE DB"
           TopLeft="350.743584517103,259.794867923627" />
+        <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Contêiner da Sequência\Carga Itens\Origem do Excel - Itens"
+          TopLeft="345.846148692644,151.076920825702" />
         <EdgeLayout
           Id="Package\Contêiner da Sequência\Carga Itens.Paths[Saída de Origem do Excel]"
           TopLeft="439.494866604874,192.676920825702">
@@ -2831,7 +2827,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2867,7 +2865,7 @@
     design-time-name="Package\Contêiner da Sequência\Carga Ordens">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="224.8,63.2"
           Id="Package\Contêiner da Sequência\Carga Ordens\Origem do Excel - Ordens"
@@ -2895,7 +2893,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2931,7 +2931,7 @@
     design-time-name="Package\Contêiner da Sequência\Carga Produto">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="206,42"
           Id="Package\Contêiner da Sequência\Carga Produto\Origem do Excel - Produtos"
@@ -2959,7 +2959,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
