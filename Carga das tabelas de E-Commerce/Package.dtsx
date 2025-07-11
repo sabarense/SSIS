@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="61"
-  DTS:VersionGUID="{543FDB68-4361-4F2A-82FD-34FAFA2EE4A0}">
+  DTS:VersionBuild="70"
+  DTS:VersionGUID="{97897277-A2BA-424F-AD02-36283EFF531D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxHBayZfX20+EBjfERhyeuQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAzD9i/jbAYjK+bi3ygKt6BAAAAAASAAACgAAAAEAAAAG1Lt0IAt4mqmNCY8THNmSQYAAAAakKpe+DZnWNKUBJ/N+6jiGNBENaUG7XFFAAAAJq2L/tYih3cFwm0Z6ZwYuB1imjH</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxHBayZfX20+EBjfERhyeuQAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABodmEjbcicbXiTzopd2p20AAAAAASAAACgAAAAEAAAAE6mJ7W+1162wWLAWsAo2awYAAAAkDWb8t7aUXJmJ714/e0hBR7udA3NKR+0FAAAAAUGaGyHSxbMBsDHNOheBaOs2LdR</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2247,6 +2247,25 @@
                           cachedName="ID"
                           externalMetadataColumnId="Package\Contêiner da Sequência\Carga Produto\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[id]"
                           lineageId="Package\Contêiner da Sequência\Carga Produto\Origem do Excel - Produtos.Outputs[Saída de Origem do Excel].Columns[ID]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Produto\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Name]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="Name"
+                          externalMetadataColumnId="Package\Contêiner da Sequência\Carga Produto\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[name]"
+                          lineageId="Package\Contêiner da Sequência\Carga Produto\Origem do Excel - Produtos.Outputs[Saída de Origem do Excel].Columns[Name]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Produto\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Price]"
+                          cachedDataType="r8"
+                          cachedName="Price"
+                          externalMetadataColumnId="Package\Contêiner da Sequência\Carga Produto\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[price]"
+                          lineageId="Package\Contêiner da Sequência\Carga Produto\Origem do Excel - Produtos.Outputs[Saída de Origem do Excel].Columns[Price]" />
+                        <inputColumn
+                          refId="Package\Contêiner da Sequência\Carga Produto\Destino OLE DB.Inputs[Entrada de Destino OLE DB].Columns[Id_Category]"
+                          cachedDataType="r8"
+                          cachedName="Id_Category"
+                          externalMetadataColumnId="Package\Contêiner da Sequência\Carga Produto\Destino OLE DB.Inputs[Entrada de Destino OLE DB].ExternalColumns[id_category]"
+                          lineageId="Package\Contêiner da Sequência\Carga Produto\Origem do Excel - Produtos.Outputs[Saída de Origem do Excel].Columns[Id_Category]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -2517,7 +2536,7 @@
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Contêiner da Sequência.PrecedenceConstraints[Restrição 4]"
           DTS:CreationName=""
-          DTS:DTSID="{DF176C74-7DA6-446F-B488-660EBE0E2FFA}"
+          DTS:DTSID="{324E7E9A-600D-4F61-A250-CA18F08B44E5}"
           DTS:From="Package\Contêiner da Sequência\Tarefa Limpar Base"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Restrição 4"
@@ -2554,23 +2573,27 @@
           Id="Package\Contêiner da Sequência\Carga Ordens"
           TopLeft="221.433308609824,160.511109815373" />
         <NodeLayout
-          Size="146,42"
+          Size="150,42"
           Id="Package\Contêiner da Sequência\Carga Produto"
           TopLeft="17.9610970874635,74.1777771751087" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\Contêiner da Sequência\Tarefa Limpar Base"
+          TopLeft="11.6666666666667,3.5" />
         <EdgeLayout
           Id="Package\Contêiner da Sequência.PrecedenceConstraints[Restrição]"
-          TopLeft="163.961097087463,96.4111105114553">
+          TopLeft="167.961097087463,96.4111105114553">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="58.3055451744136,0"
+              EndConnector="54.3055451744135,0"
               Start="0,0"
-              End="50.8055451744136,0">
+              End="46.8055451744135,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="50.8055451744136,0" />
+                    End="46.8055451744135,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2681,24 +2704,32 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="182,42"
-          Id="Package\Contêiner da Sequência\Tarefa Limpar Base"
-          TopLeft="3.66666666666674,5.5" />
         <EdgeLayout
           Id="Package\Contêiner da Sequência.PrecedenceConstraints[Restrição 4]"
-          TopLeft="92.8138818770651,47.5">
+          TopLeft="102.666666666667,45.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26.6777771751087"
+              EndConnector="-9.70556957920324,28.6777771751087"
               Start="0,0"
-              End="0,19.1777771751087">
+              End="-9.70556957920324,21.1777771751087">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.1777771751087" />
+                    End="0,10.3388885875544" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.3388885875544"
+                    Point2="0,14.3388885875544"
+                    Point3="-4,14.3388885875544" />
+                  <mssgle:LineSegment
+                    End="-5.70556957920324,14.3388885875544" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.70556957920324,14.3388885875544"
+                    Point2="-9.70556957920324,14.3388885875544"
+                    Point3="-9.70556957920324,18.3388885875544" />
+                  <mssgle:LineSegment
+                    End="-9.70556957920324,21.1777771751087" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2721,7 +2752,7 @@
     design-time-name="Package\Contêiner da Sequência\Carga Categoria">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="210,42"
           Id="Package\Contêiner da Sequência\Carga Categoria\Origem do Excel - Categoria"
@@ -2749,7 +2780,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2928,13 +2961,13 @@
     design-time-name="Package\Contêiner da Sequência\Carga Ordens">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="224.8,63.2"
+          Size="225,63"
           Id="Package\Contêiner da Sequência\Carga Ordens\Origem do Excel - Ordens"
           TopLeft="351.999994754791,85.3076910365086" />
         <NodeLayout
-          Size="216,56.8"
+          Size="216,57"
           Id="Package\Contêiner da Sequência\Carga Ordens\Destino OLE DB"
           TopLeft="354.615379331204,216.153842932903" />
         <EdgeLayout
@@ -2956,9 +2989,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -2994,7 +3025,7 @@
     design-time-name="Package\Contêiner da Sequência\Carga Produto">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="206,42"
           Id="Package\Contêiner da Sequência\Carga Produto\Origem do Excel - Produtos"
@@ -3022,9 +3053,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
